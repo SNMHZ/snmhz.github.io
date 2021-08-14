@@ -19,7 +19,7 @@ locale                   : "ko-KR"
 title                    : "Archive"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "이상목(Lee SangMok)"
+name                     : "SNMHZ"
 description              : "아카이브"
 url                      : "https://snmhz.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -94,9 +94,9 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider               : "google-gtag" # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
-    tracking_id          :
+    tracking_id          : "G-MY8205FV4G"
     anonymize_ip         : # true, false (default)
 
 
