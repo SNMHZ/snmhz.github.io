@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://snmhz.github.io/sitemap.xml

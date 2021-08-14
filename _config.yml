@@ -19,7 +19,7 @@ locale                   : "ko-KR"
 title                    : "Archive"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "이상목"
+name                     : "이상목(Lee SangMok)"
 description              : "아카이브"
 url                      : "https://snmhz.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
@@ -33,7 +33,7 @@ words_per_minute         : 200
 comments:
   provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "giscus", "custom"
   disqus:
-    shortname            : https-snmhz-github-io # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
+    shortname            : "https-snmhz-github-io" # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
   discourse:
     server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
   facebook:
@@ -105,7 +105,7 @@ author:
   name             : "이상목(Lee SangMok)"
   avatar           : "/assets/images/bio-photo.jpg"
   bio              : "Hi, there"
-  location         : "Requblic of Korea"
+  location         : "Republic of Korea"
   email            :
   links:
     - label: "Email"
