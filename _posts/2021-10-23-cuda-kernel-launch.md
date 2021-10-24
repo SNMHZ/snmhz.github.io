@@ -24,7 +24,7 @@ for (int i = 0; i < SIZE; ++i) {
 __global__ void kernel_name( int param, … );
 kernel_name <<< 1, SIZE >>>( param, … );
 ``` 
-___<<<>>> 는 쿠다 컴파일러가 책임진다(C, Cpp 문법에 존재하지 않는 연산자)___
+___`<<< >>>` 는 쿠다 컴파일러가 책임진다(C, Cpp 문법에 존재하지 않는 연산자)___
 
 <br>
 
