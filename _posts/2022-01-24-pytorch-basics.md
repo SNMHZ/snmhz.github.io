@@ -37,6 +37,7 @@ comments: true
 ## nn.Module
 - 딥러닝을 구성하는 Layer의 base calss
 - input, output, forward, backward, parameter 등 정의
+
     ```python
     class MyLiner(nn.Module):
         def __init__(self, in_features, out_features, bias=True):
@@ -57,6 +58,7 @@ comments: true
 - 데이터의 입력 형태 정의, 입력 방식 표준화
 - Image, Text, Audio 등 다양한 형식 정의 가능
 - init, len, getitem의 구현이 필수적
+
     ```python
     from torch.utils.data import Dataset
     class CustomDataset(Dataset):
@@ -79,6 +81,7 @@ comments: true
 - 학습 직전의 데이터 변환을 책임
 - Tensor로 변환 및 Batch 처리
 - 병렬적인 데이터 전처리 코드의 고민 필요
+
     ```python
     text = ['Happy', 'Amazing', 'Sad', 'Unhapy', 'Glum']
     labels = ['Positive', 'Positive', 'Negative', 'Negative', 'Negative']
@@ -95,6 +98,7 @@ comments: true
 ## model.save()
 - 학습의 결과를 저장
 - 모델 architecture와 파라미터를 저장
+
     ```python
     # 모델의 파라미터만 저장
     # 같은 모델의 형태에서 파라미터만 load
