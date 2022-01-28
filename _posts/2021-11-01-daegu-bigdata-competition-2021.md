@@ -242,10 +242,10 @@ comments: true
 실 데이터를 보기 전 분석 계획서가 통과되어야 실 데이터를 만질 수 있다.
 
 데이터 설명서만 보고 기대한 것과, 실 데이터 사이 간극이 존재하다 보니 방법에서 약간의 변경점이 있었다.
- - [(실데이터 보기 전)분석 계획서](https://github.com/SNMHZ/Personal_Macroeconomic_Sensitivity/blob/master/documents/%EA%B3%BC%EC%A0%9C%EB%B6%84%EC%84%9D%EA%B3%84%ED%9A%8D%EC%84%9C_GoDart.pdf)
- - [(실데이터 보기 전)분석 계획 발표자료](https://github.com/SNMHZ/Personal_Macroeconomic_Sensitivity/blob/master/documents/1%EC%B0%A8%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C_GoDart.pdf)
- - [(분석 완료)분석 보고서](https://github.com/SNMHZ/Personal_Macroeconomic_Sensitivity/blob/master/documents/%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C_%EB%B6%84%EC%84%9D%EB%B3%B4%EA%B3%A0%EC%84%9C_GoDart.pdf)
- - [(분석 완료)분석 결과 발표자료](https://github.com/SNMHZ/Personal_Macroeconomic_Sensitivity/blob/master/documents/%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C_%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C_GoDart.pdf)
+ - [(실데이터 보기 전)분석 계획서](https://nbviewer.org/github/SNMHZ/Personal_Macroeconomic_Sensitivity/blob/master/documents/%EA%B3%BC%EC%A0%9C%EB%B6%84%EC%84%9D%EA%B3%84%ED%9A%8D%EC%84%9C_GoDart.pdf)
+ - [(실데이터 보기 전)분석 계획 발표자료](https://nbviewer.org/github/SNMHZ/Personal_Macroeconomic_Sensitivity/blob/master/documents/1%EC%B0%A8%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C_GoDart.pdf)
+ - [(분석 완료)분석 보고서](https://nbviewer.org/github/SNMHZ/Personal_Macroeconomic_Sensitivity/blob/master/documents/%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C_%EB%B6%84%EC%84%9D%EB%B3%B4%EA%B3%A0%EC%84%9C_GoDart.pdf)
+ - [(분석 완료)분석 결과 발표자료](https://nbviewer.org/github/SNMHZ/Personal_Macroeconomic_Sensitivity/blob/master/documents/%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C_%EB%B0%9C%ED%91%9C%EC%9E%90%EB%A3%8C_GoDart.pdf)
 
 방법을 약간 바꾼 가장 큰 이유는 데이터에 대한 우리 기대가 너무 컸다는 점이다.
 
