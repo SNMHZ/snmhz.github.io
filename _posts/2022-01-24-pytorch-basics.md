@@ -37,78 +37,78 @@ comments: true
 ## nn.Module
 - 딥러닝을 구성하는 Layer의 base calss
 - input, output, forward, backward, parameter 등 정의
-```python
-class MyLiner(nn.Module):
-    def __init__(self, in_features, out_features, bias=True):
-        super().__init__()
-        self.in_features = in_features
-        self.out_features = out_features
-        self.weights = nn.Parameter(torch.randn(in_features, out_features))
-        self.bias = nn.Parameter(torch.randn(out_features))
+    ```python
+    class MyLiner(nn.Module):
+        def __init__(self, in_features, out_features, bias=True):
+            super().__init__()
+            self.in_features = in_features
+            self.out_features = out_features
+            self.weights = nn.Parameter(torch.randn(in_features, out_features))
+            self.bias = nn.Parameter(torch.randn(out_features))
+            ...
+        
+        def forward(self, x : Tensor):
+            return x @ self.weights + self.bias
+        
         ...
-    
-    def forward(self, x : Tensor):
-        return x @ self.weights + self.bias
-    
-    ...
-```
+    ```
 
 ## Dataset
 - 데이터의 입력 형태 정의, 입력 방식 표준화
 - Image, Text, Audio 등 다양한 형식 정의 가능
 - init, len, getitem의 구현이 필수적
-```python
-from torch.utils.data import Dataset
-class CustomDataset(Dataset):
-    def __init__(self, text, labels):
-        self.labels = labels
-        self.data = text
-    
-    def __len__(self):
-        return len(self.labels)
-    
-    def __getitem__(self, idx):
-        label = self.labels[idx]
-        text = self.data[idx]
-        sample = {"Text": text, "Class": label}
-        return sample
-```
+    ```python
+    from torch.utils.data import Dataset
+    class CustomDataset(Dataset):
+        def __init__(self, text, labels):
+            self.labels = labels
+            self.data = text
+        
+        def __len__(self):
+            return len(self.labels)
+        
+        def __getitem__(self, idx):
+            label = self.labels[idx]
+            text = self.data[idx]
+            sample = {"Text": text, "Class": label}
+            return sample
+    ```
 
 ## DataLoader
 - 데이터의 배치를 생성
 - 학습 직전의 데이터 변환을 책임
 - Tensor로 변환 및 Batch 처리
 - 병렬적인 데이터 전처리 코드의 고민 필요
-```python
-text = ['Happy', 'Amazing', 'Sad', 'Unhapy', 'Glum']
-labels = ['Positive', 'Positive', 'Negative', 'Negative', 'Negative']
-MyDataset = CustomDataset(text, labels)
+    ```python
+    text = ['Happy', 'Amazing', 'Sad', 'Unhapy', 'Glum']
+    labels = ['Positive', 'Positive', 'Negative', 'Negative', 'Negative']
+    MyDataset = CustomDataset(text, labels)
 
-MyDataLoader = DataLoader(MyDataset, batch_size=2, shuffle=True)
-for dataset in MyDataLoader:
-    print(dataset)
-# {'Text': ['Glum', 'Unhapy'], 'Class': ['Negative', 'Negative']}
-# {'Text': ['Sad', 'Amazing'], 'Class': ['Negative', 'Positive']}
-# {'Text': ['Happy'], 'Class': ['Positive']}
-```
+    MyDataLoader = DataLoader(MyDataset, batch_size=2, shuffle=True)
+    for dataset in MyDataLoader:
+        print(dataset)
+    # {'Text': ['Glum', 'Unhapy'], 'Class': ['Negative', 'Negative']}
+    # {'Text': ['Sad', 'Amazing'], 'Class': ['Negative', 'Positive']}
+    # {'Text': ['Happy'], 'Class': ['Positive']}
+    ```
 
 ## model.save()
 - 학습의 결과를 저장
 - 모델 architecture와 파라미터를 저장
-```python
-# 모델의 파라미터만 저장
-# 같은 모델의 형태에서 파라미터만 load
-torch.save(model.state_dict(), os.path.join(MODEL_PATH, "model.pt"))
+    ```python
+    # 모델의 파라미터만 저장
+    # 같은 모델의 형태에서 파라미터만 load
+    torch.save(model.state_dict(), os.path.join(MODEL_PATH, "model.pt"))
 
-new_model = TheModelClass()
-new_model.load_state_dict(torch.load(os.path.join(MODEL_PATH, "model.pt")))
+    new_model = TheModelClass()
+    new_model.load_state_dict(torch.load(os.path.join(MODEL_PATH, "model.pt")))
 
-###################################
-# 모델의 architecture와 함께 저장
-# 모델의 architecture와 함께 load
-torch.save(model, os.path.join(MODEL_PATH, "model.pt"))
-model = torch.load(os.path.join(MODEL_PATH, "model.pt"))
-```
+    ###################################
+    # 모델의 architecture와 함께 저장
+    # 모델의 architecture와 함께 load
+    torch.save(model, os.path.join(MODEL_PATH, "model.pt"))
+    model = torch.load(os.path.join(MODEL_PATH, "model.pt"))
+    ```
 
 ## Transfer learning
 - 다른 데이터셋으로 학습한 모델을 현재 데이터에 적용
