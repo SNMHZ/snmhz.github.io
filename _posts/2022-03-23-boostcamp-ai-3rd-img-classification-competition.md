@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "부스트캠프 3기 이미지 분류 대회 후기"
+title: "Boostcamp AI Tech 3기 이미지 분류 대회 후기"
 toc: true
 toc_sticky: true
 comments: true
