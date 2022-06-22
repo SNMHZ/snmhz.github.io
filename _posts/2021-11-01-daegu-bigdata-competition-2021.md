@@ -5,7 +5,7 @@ title: "대구 빅데이터 분석 경진대회 3회 후기"
 toc: true
 toc_sticky: true
 comments: true
-categories: []
+categories: [ 이야기 ]
 tags: [ 회고 ]
 ---
 
