@@ -5,8 +5,8 @@ title: "데이터 시각화"
 toc: true
 toc_sticky: true
 comments: true
-categories: []
-tags: []
+categories: [ NAVER BoostCamp AI Tech ]
+tags: [ NAVER BoostCamp AI Tech, visualization ]
 ---
 
 ## 시각화 고려사항
