@@ -5,8 +5,8 @@ title: "통계학 맛보기"
 toc: true
 toc_sticky: true
 comments: true
-categories: []
-tags: []
+categories: [ NAVER BoostCamp AI Tech ]
+tags: [ NAVER BoostCamp AI Tech, statistics ]
 ---
 
 ## 통계적 모델링
