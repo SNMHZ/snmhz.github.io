@@ -5,8 +5,8 @@ title: "Boostcamp AI Tech 3기 이미지 분류 대회 후기"
 toc: true
 toc_sticky: true
 comments: true
-categories: [NAVER BoostCamp AI Tech]
-tags: [NAVER BoostCamp AI Tech]
+categories: [ NAVER BoostCamp AI Tech ]
+tags: [ NAVER BoostCamp AI Tech, 회고 ]
 ---
 
 > [Repository Link](https://github.com/boostcampaitech3/level1-image-classification-level1-recsys-15)
