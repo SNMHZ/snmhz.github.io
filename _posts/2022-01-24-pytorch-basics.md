@@ -121,4 +121,4 @@ tags: []
 - 다른 데이터셋으로 학습한 모델을 현재 데이터에 적용
 - 현재의 DL에서는 가장 일반적인 학습 기법
 - backbone이 잘 학습된 모델에서 일부분만 변경하여 학습을 수행
-- pretrained model을 활용시 모델의 일부분을 frozen 시킴
+- pretrained model을 활용시 모델의 일부분을 frozen 시킴 

@@ -1,4 +1,4 @@
----
+--- 
 layout: post
 date: 2022-03-23 03:00:00 AM
 title: "Boostcamp AI Tech 3기 이미지 분류 대회 후기"
