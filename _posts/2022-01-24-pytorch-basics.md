@@ -5,8 +5,8 @@ title: "PyTorch 기본"
 toc: true
 toc_sticky: true
 comments: true
-categories: []
-tags: []
+categories: [ NAVER BoostCamp AI Tech ]
+tags: [ NAVER BoostCamp AI Tech, pytorch ]
 ---
 
 ## PyTorch 핵심 요소
