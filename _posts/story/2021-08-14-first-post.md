@@ -5,8 +5,8 @@ title: "첫 포스팅 테스트"
 toc: true
 toc_sticky: true
 comments: true
-categories: []
-tags: []
+categories: [ 이야기 ]
+tags: [ ]
 ---
 
 # 깃허브 블로그 테스트

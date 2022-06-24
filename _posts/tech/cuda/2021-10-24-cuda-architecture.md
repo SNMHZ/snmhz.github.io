@@ -5,8 +5,8 @@ title: "CUDA Architecture"
 toc: true
 toc_sticky: true
 comments: true
-categories: [CUDA]
-tags: [CUDA]
+categories: [ Tech, CUDA ]
+tags: [ CUDA ]
 ---
 
 ## CUDA hardware의 구조(Tesla GP100 예시)

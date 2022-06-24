@@ -5,8 +5,8 @@ title: "CUDA Kernel Launch"
 toc: true
 toc_sticky: true
 comments: true
-categories: [CUDA]
-tags: [CUDA]
+categories: [ Tech, CUDA ]
+tags: [ CUDA ]
 ---
 
 ## C/C++ function call syntax
