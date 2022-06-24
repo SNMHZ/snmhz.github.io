@@ -217,7 +217,7 @@ tags: [ 회고 ]
 
     그리고 일찍 수상자에게는 언질이라도 주지 않을까 했는데, 시상하는 그 순간까지도 누가 수상자인지 알려주지 않았다.
 
-<center><img src="../assets/images/dg_bigdata/시상식1.png" width="70%"></center>
+<center><img src="../assets/image/storys/dg_bigdata/시상식1.png" width="70%"></center>
 
 </div>
 </details>
@@ -229,7 +229,7 @@ tags: [ 회고 ]
 # 분석 내용
 
 ## 주제 요약
-<img src="/image/dg_bigdata/slide1.png" width="70%"><br><sup>(디자인 정말 이쁘다!!)</sup><br>
+<img src="/image/story/dg_bigdata/slide1.png" width="70%"><br><sup>(디자인 정말 이쁘다!!)</sup><br>
 
 > 딥러닝을 통해 경제변수 변화에 따른 금융시장 참여자의 행동 변화를 예측·분석하여 초개인화된 금융상품과 서비스를 추천 및 개발할 수 있도록 한다
 
@@ -256,18 +256,18 @@ tags: [ 회고 ]
 
 하지만 실제로는 단 3시점의 데이터만 있었기에 기준 시점으로 2달 전까지의 데이터를 생성하여 활용하였다.
 
-<img src="/image/dg_bigdata/이상과현실.png" width="100%">
+<img src="/image/story/dg_bigdata/이상과현실.png" width="100%">
 
 여기 표가 다 채워져 있기를 바랐었다.
 
-<img src="/image/dg_bigdata/slide10.png" width="70%">
+<img src="/image/story/dg_bigdata/slide10.png" width="70%">
 
 그래서 `그랜저 인과관계 검정` 대신 `상관관계`를 통해 민감 고객 분류를 시도한 점이 가장 큰 변경점이다.
 
 ## 발표 중 받았던 일부 질문
 1. __train/test set을 다 합쳐서 7:3 하지 않고 왜 19,20/21로 나누었는가?__
 
-    <img src="/image/dg_bigdata/slide14.png" width="70%"><br>
+    <img src="/image/story/dg_bigdata/slide14.png" width="70%"><br>
     미래참조 문제 때문인데, 7:3으로 나누면 왜 안되는지를 위주로 답변하였다.
      - 모델이 21년 샘플로 학습하고, 19년 샘플로 검증을 시도할 가능성이 생긴다.
      - 이 경우, 19년 시점에선 절대 알 수 없는 데이터로 검증이 이루어진 셈이다. 
@@ -275,7 +275,7 @@ tags: [ 회고 ]
 
 2. __예측하는데 있어 따로 pre trained model은 활용하지 않았는가?__
 
-    <img src="/image/dg_bigdata/slide16.png" width="70%"><br>
+    <img src="/image/story/dg_bigdata/slide16.png" width="70%"><br>
     pre trained model. 딥러닝, 특히 자연어 처리와 이미지 처리에서 매우 중요한 개념이 아닐 수 없다.
     
     근래 자연어 처리 프로젝트를 진행하며 BERT를 접해볼 기회가 있었다.
@@ -326,8 +326,8 @@ tags: [ 회고 ]
 
 우리의 주제는 `초 개인화 서비스 제안`으로 딱 박혀 있는데 정작 이 부분은 너무 부실하다.
 
-<img src="/image/dg_bigdata/slide23.png" width="70%"><br>
-<img src="/image/dg_bigdata/slide24.png" width="70%"><br>
+<img src="/image/story/dg_bigdata/slide23.png" width="70%"><br>
+<img src="/image/story/dg_bigdata/slide24.png" width="70%"><br>
 정교한 데이터 분석 및 예측은 앞단인 `라벨링`과 `모델링`에만 집중되어 있고, 활용인 `제안`부분은 그냥 모델이 예측한 것의 정성적인 활용 방안에 불과하다.
 
 약간의 변명을 해 보자면
@@ -350,8 +350,8 @@ tags: [ 회고 ]
 
 ### 발표 자료 준비에서의 디테일
 
-<img src="/image/dg_bigdata/slide11.png" width="70%"><br>
-<img src="/image/dg_bigdata/slide20.png" width="70%"><br>
+<img src="/image/story/dg_bigdata/slide11.png" width="70%"><br>
+<img src="/image/story/dg_bigdata/slide20.png" width="70%"><br>
 분석 결과 발표 시 예시를 들 때 고용률을 활용하였다.
 
 고용률은 우리가 임의로 1달 lagging하여 사용하였다 보니, 분석 방법과 활용 방안에서의 이미지를 잘 보면 상관관계가 거꾸로 뒤집혀 있다. 
@@ -382,7 +382,7 @@ __그리고 PPT에 이에 대한 설명이 아예 없었다.__
 
 이를 증명이라도 하듯 모든 것이 담겨 있어야 할 __보고서에도 1달 시차 주었다 한줄만__ 달랑 들어가 있고 왜 그랬는지에 대한 __이유는 아예 없다__.
 
-<img src="/image/dg_bigdata/뼈아픈실책.png" width="100%"><br>
+<img src="/image/story/dg_bigdata/뼈아픈실책.png" width="100%"><br>
 <sup>다 잘해놓고..</sup>
 
 왜 그렇게 했나에 대한 집착은 또 하고 또 해도 부족하지 않나. 결국 이게 어떤 프로젝트를 진행해도 퀄리티(품질)의 핵심이 아닌가.
@@ -433,11 +433,11 @@ __그리고 PPT에 이에 대한 설명이 아예 없었다.__
 
 최종 결과는 장려상이다.
 
-<img src="/image/dg_bigdata/시상식2.png" width="70%">
+<img src="/image/story/dg_bigdata/시상식2.png" width="70%">
 
 우리 팀장님이 서울로 인턴을 가버려서 저 자리는 내가 갔다.
 
-<img src="/image/dg_bigdata/상장.png" width="70%">
+<img src="/image/story/dg_bigdata/상장.png" width="70%">
 
 <!-- ~~과연 우리의 회식은 이루어 질 수 있을지..?ㅋㅋ~~ -->
 <!--아마도 없을 듯.--> 
