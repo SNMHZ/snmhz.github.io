@@ -107,15 +107,14 @@ test error와 training error의 차이를 통해 얻는 `일반화 갭의 상태
 1개를 쓰면 너무 오래걸리고, <br>
 너무 많이 넣으면 GPU 메모리가 터지고,<br>
 적절한 수를 찾아야 한다.
-
 <img src="/image/boostcamp/dl-optimization/flat-minimum-advantage.png" width="100%"><br>
 <sup>[논문: On Large-Batch Training for Deep Learning](https://arxiv.org/abs/1609.04836)</sup>
  - 라지 배치사이즈를 사용하면 sharp minimum에 도착한다.
- - 배치 사이즈를 작게 쓰는게 일반적으로 좋다. 
- - sharp minimum보다는 flat minimum에 도착하는 것이 더 좋다.
- - 일반화 성능이 높아진다.
+ - sharp minimum에서는 testing function에서 조금만 멀어져도 잘 동작하지 않을 수 있다.(위 이미지의 보라색 선 참고)
  - flat minimum에 도착하면 testing function에서 조금 멀어져도 괜찮은 성능을 기대할 수 있다.
- - sharp minimum이면 조금만 멀어져도 굉장히 잘 동작하지 않을 수 있다.(위 이미지의 보라색 선 참고)
+ - flat minimum에 도착하면 일반화 성능이 높아진다.
+ - sharp minimum보다는 flat minimum에 도착하는 것이 더 좋다.
+ - 배치 사이즈를 작게 쓰는게 일반적으로 좋다. 
 
 ### Gradient Desent Methods
 똑같이 Gradient Information만 이용해서<br>
