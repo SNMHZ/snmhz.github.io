@@ -11,9 +11,9 @@ tags: [ NAVER BoostCamp AI Tech, Deep Learning ]
 
 딥러닝에서의 최적화(Optimization)란 무엇일까?
 
-단순하게 생각하면 Gradient Descent를 통해 랜덤으로 초기화된 weight들을 loss를 최소화하는 방향으로 변화시키는 것 이라고 답변할 수 있을 것이다.
+단순하게 생각하면 Gradient Descent를 통해 랜덤으로 초기화된 weight들을 cost를 최소화하는 방향으로 변화시키는 것 이라고 답변할 수 있을 것이다.
 
-하지만, 그 과정에서 고민하고 확인해야 할 것이 무엇이 있는지, 이를 위해 알아두면 좋은 것들에 대해 정리하고자 한다.
+하지만, 그 과정에서 고민하고 확인해야 할 것이 무엇이 있는지, 이를 위해 체크하면 좋을 것들에 대해 정리하고자 한다.
 
 ## 일반화(Generalization)에 대하여
 최적화의 목표 중 하나는, `일반화 성능`을 높이는 것이라 할 수 있다.
@@ -22,47 +22,66 @@ tags: [ NAVER BoostCamp AI Tech, Deep Learning ]
 > 일반화 성능을 높이면 무조건 좋은건가? <br>
 > 일반화란 어떤 의미일까?
 
-학습을 시키게 되면 학습 데이터를 점점 더 잘 맞춘다.
-
-계속 학습을 시키면, training set에 과적합되어 test set에 대해선 잘 맞추지 못하는 모습을 보인다.
+학습을 시키면 모델의 weight들이 training set의 cost를 최소화하는 방향으로 업데이트 된다.<br>
+계속 학습을 시키게 되면 점점 더 잘 맞추게 된다.<br>
+단, 일정 수준을 넘어버리면 training set에 과적합되어 test set에 대해선 잘 맞추지 못하는 모습을 보인다.
 <img src="/image/boostcamp/dl-optimization/under-over-fitting.png" width="100%"><br>
-<sup>[reference](https://docs.aws.amazon.com/machine-learning/latest/dg/model-fit-underfitting-vs-overfitting.html)</sup>
-
-학습 데이터에 너무 맞추는 것도 아니고, 너무 못 맞추는 것도 아니고.
-
+<center>
+<sup>
+<a href="https://docs.aws.amazon.com/machine-learning/latest/dg/model-fit-underfitting-vs-overfitting.html">reference.</a>
+ 모두에게 너무나 익숙한 그 그림
+</sup>
+</center><br>
+학습 데이터에 너무 맞추는 것도 아니고, 너무 못 맞추는 것도 아니고.<br>
 그 중간 어딘가가 가장 좋은(Balanced) 지점이라 할 수 있다.
 
-하지만 이는 너무 이론적인 말이고, 실제 문제에서 항상 들어맞는다고 할 수는 없다.
+하지만 이는 너무 이론적인 말이다.<br>
+실제 문제에서 항상 똑같이 적용할 수 있다고 할 수는 없다.
 
-우리가 가정하고 있는건, data가 학습하고자 하는 어떤 목적에서 발생된 구조적인 데이터라고 가정하고 있을 뿐이다.
-
-실제 풀고자 하는 문제의 타겟은 저 급격하게 변하는 모양새의 오버피팅된 모습일 수도 있고, 아예 다른 형태일 수도 있다.
-
+실제 풀고자 하는 문제의 타겟은 저 급격하게 변하는 모양새의 오버피팅된 모습일 수도 있고, 아예 다른 형태일 수도 있다.<br>
+우리가 가정하고 있는 것은 데이터가 학습하고자 하는 어떤 목적에서 발생된 구조적인 형태를 가지고 있을 것이라고 가정하고 있을 뿐이다.<br>
 이 부분은 디테일한 데이터 분석을 통해 데이터에 대해 깊게 이해하고, 정확하게 문제를 정의하는 것이 가장 중요하다고 생각된다.
 
 ### 일반화된 지점을 어떻게 확인할까?
-<img src="/image/boostcamp/dl-optimization/generalization-gap.png" width="100%"><br>
-test error와 training error의 차이 통해 일반화 갭의 상태를 보고 결정할 수 있다.
-
-단, 이를 통해서는 이 모델의 성능이 학습 성능이랑 비슷할 것이란 사실만 알 수 있다.
-
-학습 데이터에 대해 성능이 좋지 않으면, 일반화 갭이 작다고 해서 잘 학습되었다고 할 수는 없다.
+<img src="/image/boostcamp/dl-optimization/generalization-gap.png" width="90%"><br>
+test error와 training error의 차이를 통해 얻는 `일반화 갭의 상태를 보고 결정`할 수 있다.<br>
+단, 이를 통해서는 `이 모델의 성능이 학습 성능이랑 비슷할 것`이란 사실만 알 수 있다.<br>
+학습 데이터에 대해 성능이 좋지 않으면<sub>(학습을 덜 했거나, 데이터에 노이즈가 너무 많이 껴 있거나, 데이터와 맞지 않는 모델을 사용했거나 등등..)</sub>, `일반화 갭이 작다고 해서 잘 학습되었다고 할 수는 없다`.
 
  - `일반화 성능이 좋다` != `테스트 데이터 성능이 좋을 것이다`
  - `일반화 성능이 좋다` == `테스트 데이터 성능이 학습 데이터 성능과 비슷할 것이다`
 
+<br><br>
 
-## Bias와 Variance
+## 모델의 성능에 대한 Bias와 Variance
+모델의 파라미터(weight, bias 등)를 말하는 것이 아님에 유의
 
- - variance 비슷한 입력을 넣었을 때 출력이 얼마나 일관적으로 나오는가
-    - variance가 낮다 -> 간단한 모델이 많이 이럴 것.
-    - variance가 높다 -> 비슷한 입력에 출력이 많이 달라진다. overfitting이 날 가능성이 높다.
- - bias. 비슷한 입력에 대해서 true target에 얼마나 접근하는가.
+사격 시 탄착군과 비슷한 개념으로 생각할 수 있다.
+<img src="/image/boostcamp/dl-optimization/high-low-bias-variance.png" width="50%"><br>
 
-## bias and variance Trade-off
+### 모델의 성능에 대한 Bias
+비슷한 입력에 대해서 true target에 얼마나 접근하는가. 
+
+ - bias가 높다 
+   - 평균적으로 봤을 때 출력이 많이 분산 되더라도 평균적으로 True Target에 접근하는 경우. 
+ - bias가 낮다 
+   - 바이어스가 높은건 mean과 많이 벗어낫는지
+
+### 모델의 성능에 대한 Variance 
+비슷한 입력을 넣었을 때 출력이 얼마나 일관적으로 나오는가
+
+ - variance가 낮다 
+   - 간단한 모델이 많이 이럴 것.
+ - variance가 높다 
+   - 비슷한 입력에 출력이 많이 달라진다. overfitting이 날 가능성이 높다.
+
+### Bias and Variance Trade-off
+<img src="/image/boostcamp/dl-optimization/cost-bias-variance-noise.png" width="90%"><br>
  노이즈가 학습 데이터에 노이즈가 껴 있다고 가정했을 때
  데이터의 cost를 minimize하는 것은 사실 cost가 bias, variance, noise 3가지 파트로 이루어져 있기 때문에 각각을 minimize 하는 것이 아니라서 하나가 줄어들면 하나가 커질 수 밖에 없다.
  trade-off의 관계에 있다.
+
+<br><br>
 
 ## Gradient Descent
  - Stocastic Gradient Descent
