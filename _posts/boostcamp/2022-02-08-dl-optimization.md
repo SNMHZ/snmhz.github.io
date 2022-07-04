@@ -62,6 +62,7 @@ test error와 training error의 차이를 통해 얻는 `일반화 갭의 상태
 ## 모델의 성능에 대한 Bias와 Variance
 모델의 파라미터(weight, bias 등)를 말하는 것이 아님에 유의<br>
 사격 시 탄착군과 비슷한 개념으로 생각할 수 있다.
+
 <img src="/image/boostcamp/dl-optimization/high-low-bias-variance.png" width="50%"><br>
 
 ### 모델의 성능에 대한 Bias
