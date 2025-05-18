@@ -30,16 +30,16 @@ Git을 사용하다 보면 브랜치명을 어떻게 지어야 할지 고민하�
 ### 2. 가독성과 일관성
 
 하이픈`-`은 영어권에서 단어를 연결하는 표준적인 방식이고, <br>
-URL, 파일명 등 다양한 환경에서 자연스럽게 사용되고 있습니다.<br>
+URL, 파일명 등 다양한 환경에서 문제없이 사용할 수 있고, 사용되고 있습니다.<br>
 
 브랜치명을 여러 사람이 함께 볼 때 하이픈`-`이 단어 구분이 더 명확하고, <br>
-협업 시 혼동이 적어 일관성을 유지하기 쉽습니다.
+협업 시 혼동이 적어 일관성을 유지하기 쉽다, 라고들 이야기합니다.
 
 ### 3. 호환성과 실무적 이유
 
-- 하이픈`-`은 GitHub, GitLab 등 주요 플랫폼에서 URL 경로의 일부로도 자연스럽게 동작합니다. <br>
+- 하이픈`-`은 GitHub, GitLab 등 주요 플랫폼에서 URL 경로로 아무런 문제 없이 동작합니다. <br>
 - 언더바`_`는 변수명 등 코드 내부에서 주로 쓰이고, URL에서 가독성이 떨어지거나 가끔 혼동을 줄 수 있습니다. <br>
-- 일부 명령줄 환경이나 스크립트에서 하이픈과 언더바를 혼동할 수 있어, 오타나 실수를 줄이기 위해서도 하이픈이 선호됩니다.
+- 일부 명령줄 환경이나 스크립트에서 하이픈과 언더바를 혼동할 수 있어, 오타나 실수를 줄이기 위해서도 하이픈이 선호되기도 합니다.
 
 ### 4. 코드와 브랜치명의 환경 차이
 
@@ -65,7 +65,7 @@ URL, 파일명 등 다양한 환경에서 자연스럽게 사용되고 있습니
 
 특히 대형 오픈소스 프로젝트(예: React, TensorFlow, VS Code 등)에서 하이픈`-`을 적극적으로 사용하고,<br>
 GitHub, Atlassian, Microsoft 등 주요 개발 플랫폼의 가이드에서도 하이픈`-` 사용을 권장하면서<br>
-초보 개발자부터 시니어까지 모두가 하이픈`-`을 쓰는 문화가 굳어진 현상입니다.
+초보 개발자부터 시니어까지 모두가 하이픈`-`을 쓰는 문화가 굳어져 발생한 현상입니다.
 
 ## 오픈소스 프로젝트의 브랜치 네이밍 컨벤션 정리
 
@@ -95,9 +95,9 @@ feature/123-add-login
 
 ### 3. 참고 링크
 
-- [GitHub Branching Name Best Practices](https://github.com)
-- [BetterStack: Common Branch Naming Practices](https://betterstack.com/community/guides/scm/git-branch-naming-convention/)
-- [phoenixNAP: Git Branch Name Convention](https://phoenixnap.com/kb/git-branch-naming-convention)
+- [Microsoft Learn: Create a new Git branch](https://learn.microsoft.com/en-us/azure/devops/repos/git/create-branch)
+- [Google Cloud Looker: Using version control and deploying](https://cloud.google.com/looker/docs/version-control-and-deploying-changes?hl=ko#branch_name_rules)
+- [How to Contribute to Apache Hive](https://cwiki.apache.org/confluence/display/Hive/HowToContribute)
 
 ## 마치며
 
@@ -105,7 +105,7 @@ feature/123-add-login
 **기술적 제약이 아니라 관례와 협업의 효율성 때문**입니다.
 
 하이픈`-`이 가독성, 호환성, 일관성 면에서 유리하고,<br>
-대부분의 오픈소스 프로젝트와 글로벌 개발 커뮤니티에서 이를 표준처럼 사용하고 있습니다.
+대부분의 오픈소스 프로젝트와 글로벌 개발 커뮤니티에서 이를 표준처럼 지금까지 사용해 오고 있습니다.
 
-여러분의 프로젝트에서도 브랜치 네이밍 컨벤션을 정할 때<br>
-이런 문화를 이해하는 것 또한 협업과 유지보수를 용이하게 하는데 도움이 될 수 있습니다.
+우리들 또한 해당 도구들을 이용한다면, 브랜치 네이밍 컨벤션을 정할 때<br>
+이런 히스토리와 문화를 이해하는 것도 협업과 유지보수를 용이하게 하는데 도움이 될 수 있습니다.
