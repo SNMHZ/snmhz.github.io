@@ -1,11 +1,12 @@
 ---
-title: "Airflow DAG 파싱 주기 설정 시 주의할 점과 최적화 전략"
+layout: post
 date: 2025-05-24 00:00:00 +0900
-categories: [ Tech, Airflow ]
-tags: [ Airflow ]
+title: "Airflow DAG 파싱 주기 설정 시 주의할 점과 최적화 전략"
 toc: true
 toc_sticky: true
 comments: true
+categories: [ Tech, Airflow ]
+tags: [ Airflow ]
 ---
 
 ## 서론
@@ -37,7 +38,7 @@ Airflow를 운영하다 보면 DAG 변경사항이 언제 반영되는지 답답
 ``` 
 DAG 파일 변경/추가 
       ↓
-① 디렉토리 스캔 (refresh_interval) 
+① 디렉토리 스캔 (refresh_interval - Airflow 3.0+) 
       ↓ 
 ② DAG 파일 파싱 (min_file_process_interval) 
       ↓
@@ -84,11 +85,12 @@ Airflow에서 단순히 파일 변경만 감지하지 않고 주기적으로 모
 
 ## 2. 주요 옵션별 역할과 동작 방식
 
-### 2.1 `[dag_processor] refresh_interval`
+### 2.1 `[dag_processor] refresh_interval` *(Airflow 3.0+)*
 
 - **기능** - DAG 번들에서 새 파일을 찾거나 갱신하는 주기 (초 단위)
 - **기본값** - `300` (5분)
 - **역할** - 새 파일 추가/삭제 감지
+- **Airflow 2.x에서는** - `[scheduler] dag_dir_list_interval` 사용 (deprecated)
 - ⚠️ `min_file_process_interval`보다 짧게 설정하면 불필요한 스캔이 발생합니다
 
 ### 2.2 `[dag_processor] min_file_process_interval`
@@ -160,9 +162,23 @@ refresh_interval ≥ min_file_process_interval ≈ min_serialized_dag_update_int
 
 **권장 설정 예시**
 
+**Airflow 3.0+:**
 ```ini
 [dag_processor]
 refresh_interval = 300
+min_file_process_interval = 30
+
+[core]
+min_serialized_dag_update_interval = 30
+min_serialized_dag_fetch_interval = 10
+```
+
+**Airflow 2.x:**
+```ini
+[scheduler]
+dag_dir_list_interval = 300  # deprecated but works in all versions
+
+[dag_processor]
 min_file_process_interval = 30
 
 [core]
