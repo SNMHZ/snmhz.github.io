@@ -1,11 +1,12 @@
 ---
-title: "Python 3.10에서 3.11로 마이그레이션 시 str, Enum 문자열 출력 동작 변경과 대응 전략"
+layout: post
 date: 2025-05-16 00:00:00 +0900
-categories: [ Tech, Python ]
-tags: [ Python, Python3.11, Enum ]
+title: "Python 3.10에서 3.11로 마이그레이션 시 str, Enum 문자열 출력 동작 변경과 대응 전략"
 toc: true
 toc_sticky: true
 comments: true
+categories: [ Tech, Python ]
+tags: [ Python, Python3.11, Enum ]
 ---
 
 ## 서론

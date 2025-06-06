@@ -1,11 +1,12 @@
 ---
-title: "파이썬 개발자가 가져야 할 자세"
+layout: post
 date: 2025-05-17 00:00:00 +0900
-categories: [ Tech, Python ]
-tags: [ Python, 잡설 ]
+title: "파이썬 개발자가 가져야 할 자세"
 toc: true
 toc_sticky: true
 comments: true
+categories: [ Tech, Python ]
+tags: [ Python, 잡설 ]
 ---
 
 ## 서론

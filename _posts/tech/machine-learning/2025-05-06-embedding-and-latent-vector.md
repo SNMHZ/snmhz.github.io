@@ -1,11 +1,12 @@
 ---
-title: "Embedding과 Latent Vector, 헷갈리는 개념 정리"
+layout: post
 date: 2025-05-06 00:00:00 +0900
-categories: [ Tech, Machine Learning ]
-tags: [ embedding, Deep Learning ]
+title: "Embedding과 Latent Vector, 헷갈리는 개념 정리"
 toc: true
 toc_sticky: true
 comments: true
+categories: [ Tech, Machine Learning ]
+tags: [ embedding, Deep Learning ]
 ---
 
 # 서론

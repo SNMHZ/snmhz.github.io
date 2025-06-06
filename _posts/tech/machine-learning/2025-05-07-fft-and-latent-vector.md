@@ -1,11 +1,12 @@
 ---
-title: "FFT 압축 결과는 왜 Latent Vector가 아닐까?"
+layout: post
 date: 2025-05-07 00:00:00 +0900
-categories: [ Tech, Machine Learning ]
-tags: [ FFT, Data Compression, Deep Learning ]
+title: "FFT 압축 결과는 왜 Latent Vector가 아닐까?"
 toc: true
 toc_sticky: true
 comments: true
+categories: [ Tech, Machine Learning ]
+tags: [ FFT, Data Compression, Deep Learning ]
 ---
 
 ## 서론
